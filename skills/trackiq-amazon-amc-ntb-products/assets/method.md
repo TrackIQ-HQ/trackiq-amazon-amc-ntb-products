@@ -20,9 +20,10 @@ Take the median `ntb_share` of the non-thin ASINs in the focus month.
 | **Retention** | `ntb_share` at least 10 points below the median |
 | **Mixed** | everything between |
 
-Use the two earlier months as a check, not an input: a gateway in all three
-months is **steady**; one that only qualifies in the focus month is
-**new this month** and gets a note, not a funding recommendation.
+Use the two earlier months as a check, not an input. Classify each month
+against **that month's own median**. A gateway in all three months is
+**steady**; one that only qualifies in the focus month is **new this month**
+and gets a note, not a funding recommendation.
 
 ## 3. Their share of new customers
 
@@ -41,8 +42,17 @@ spend_share = asin ad spend (SP + SD) / total SP + SD spend on non-thin ASINs
 gap         = ntb_contribution - spend_share
 ```
 
-- **Underfunded gateway**: a steady gateway with `gap` above **+5 points**.
-  These are the recommendations.
+- **Underfunded recruiter**: any product that is not Retention, has
+  `ntb_share` at or above the median, was non-thin in all three months, and
+  has `gap` above **+5 points**. These are the recommendations. Do not limit
+  them to Gateways: the product that brings in the most new customers is
+  often Mixed — a best-seller whose share sits a few points above the median
+  on far more buyers than any gateway.
+- **Halo check.** `ntb_users` counts new customers who bought the product
+  after seeing *any* of the brand's ads, not only its own. A product with
+  almost no ad spend can still post a large share of new customers. When a
+  product's own spend is under 1% of the total, call the gap a test to run,
+  not a return already proven.
 - **Overfunded retention**: a retention product with `gap` below
   **−5 points**. Name it; recommend moving the difference, not cutting it.
 

@@ -88,7 +88,7 @@ outward channel.
 
 ## Version
 
-`trackiq-amazon-amc-ntb-products` v1.0.0 (2026-09-21).
+`trackiq-amazon-amc-ntb-products` v1.1.0 (2026-09-21).
 
 If the user asks whether this skill is current, fetch
 `https://trackiq.com/skills/registry.json`, compare the `version` field for

@@ -19,6 +19,10 @@
 - Thin products (under 50 purchasers) are listed separately and never ranked.
 - The account median is printed, so the classes can be understood.
 - Gateways that only qualify this month carry a note, not a recommendation.
+- Each earlier month was classified against its own median, not the focus
+  month's.
+- A recommended product with almost no ad spend of its own is framed as a
+  test (the halo check), not a proven return.
 
 ## 4. Language
 
